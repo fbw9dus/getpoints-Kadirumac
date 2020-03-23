@@ -1,10 +1,10 @@
-const patients = require('../data-patients')
+const patients = require('../data/patients')
 
 exports.getPatients = (req, res, next) => {
 
 
       
-        res.status(200).send(patients.patients)
+        res.status(200).send(patients)
 
 } 
 
@@ -12,7 +12,7 @@ exports.getPatient = async (req, res, next) => {
     
     const id =  await parseInt(req.params.id) -1
    
-    res.status(200).send(patients.patients[id])
+    res.status(200).send(patients[id])
 
 
 } 
